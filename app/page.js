@@ -1,102 +1,72 @@
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+export default function Portfolio() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white p-6 font-sans">
+      <div className="text-center py-10">
+        <h1 className="text-5xl font-extrabold mb-2">Aishwary Kumar</h1>
+        <p className="text-xl text-purple-200"> Intern @ Vensure | Full Stack Developer</p>
+        <div className="mt-6 flex justify-center gap-4">
+          <a href="mailto:aishwaryk83@gmail.com" className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition">Contact Me</a>
+          <a href="/resume.pdf" download className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">Download Resume</a>
+        </div>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      <section className="my-10">
+        <h2 className="text-3xl font-semibold mb-4 text-purple-300">About Me</h2>
+        <p className="text-gray-300">
+  I'm Aishwary Kumar — a freshly minted B.Tech CSE graduate with a specialization in Cyber Security and a passion for breaking barriers (and sometimes systems, ethically 😉). Armed with code, caffeine, and curiosity, I live at the intersection of full-stack development and digital defense. From hacking solutions to building sleek apps, I’ve always believed that good code is like good armor — light, strong, and smart. Whether it's building automated Excel workflows, Angular dashboards, or decoding vulnerabilities, I don't just follow the tech trend — I write it.
+</p>
+
+      </section>
+
+      <section className="my-10">
+        <h2 className="text-3xl font-semibold mb-6 text-purple-300">Projects</h2>
+        <div className="grid gap-6 sm:grid-cols-2">
+          <a href="https://github.com/Aishwar77/handgestureapplication" target="_blank" className="bg-gray-800 p-5 rounded shadow hover:shadow-purple-500/50 transition cursor-pointer">
+            <h3 className="text-xl font-bold">Sign Detection App</h3>
+            <p className="text-gray-300">Built with TensorFlow to detect Indian Sign Language using transfer learning.</p>
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="https://github.com/Aishwar77/fyle-interview-intern-backend" target="_blank" className="bg-gray-800 p-5 rounded shadow hover:shadow-purple-500/50 transition cursor-pointer">
+            <h3 className="text-xl font-bold">Angular GitHub Repo Viewer</h3>
+            <p className="text-gray-300">A sleek Angular app to dynamically list and filter GitHub repositories.</p>
+          </a>
+          <a href="https://github.com/Aishwar77/HACKTOOLS" target="_blank" className="bg-gray-800 p-5 rounded shadow hover:shadow-purple-500/50 transition cursor-pointer">
+            <h3 className="text-xl font-bold">HackTools Extension</h3>
+            <p className="text-gray-300">A JavaScript browser extension to analyze site authenticity and metadata.</p>
+          </a>
+          <a href="https://github.com/Aishwar77/my-project" target="_blank" className="bg-gray-800 p-5 rounded shadow hover:shadow-purple-500/50 transition cursor-pointer">
+            <h3 className="text-xl font-bold">Excel VBA Automation</h3>
+            <p className="text-gray-300">VBA-powered Excel automation tools to streamline QA operations at Vensure.</p>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <section className="my-10">
+        <h2 className="text-3xl font-semibold mb-4 text-purple-300">Experience</h2>
+        <ul className="list-disc pl-6 text-gray-300">
+          <li><strong>Vensure Employer Solutions</strong> – Excel automation for QA team. (Sep 2024 – Present)</li>
+          <li><strong>Fyle</strong> – Full-stack development and bug fixes. (Jul 2024 – Sep 2024)</li>
+        </ul>
+      </section>
+
+      <section className="my-10">
+        <h2 className="text-3xl font-semibold mb-4 text-purple-300">Skills</h2>
+        <p className="text-gray-300">HTML, CSS, JavaScript, React, Angular, SQL, Python, Excel (Advanced + VBA)</p>
+      </section>
+
+      <section className="my-10">
+        <h2 className="text-3xl font-semibold mb-6 text-purple-300">Get in Touch</h2>
+        <div className="space-y-4 text-gray-300">
+          <p>Email: <a className="text-purple-400 underline" href="mailto:aishwaryk83@gmail.com">aishwaryk83@gmail.com</a></p>
+          <p>Phone: <span className="text-purple-400">+91 7291933881</span></p>
+          <p>GitHub: <a href="https://github.com/Aishwar77" target="_blank" className="underline text-purple-400">github.com/Aishwar77</a></p>
+          <p>Medium Blog: <a href="https://medium.com/@aishwary_k_official12" target="_blank" className="underline text-purple-400">medium.com/@aishwary_k_official12</a></p>
+        </div>
+      </section>
+
+      <footer className="text-center mt-16 text-sm text-purple-400">
+        © 2025 Aishwary Kumar. Designed with 💜 using React & Tailwind CSS.
       </footer>
     </div>
   );
